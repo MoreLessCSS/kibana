@@ -8,8 +8,8 @@ pipeline {
     }
 
     environment { 
-        GIT_URL = 'git@git.tech.rz.db.de:vendo/kto/kundenkonto.git'
-        DOCKER_IMAGE = '${env.DOCKER_REG}/vendo-kto-service-kundenkonto'
+        GIT_URL = 'git@git.tech.rz.db.de:vendo/zml/kibana.git'
+        DOCKER_IMAGE = '${env.DOCKER_REG}/vendo-zml-service-kibana'
     }
 
     stages {
@@ -18,13 +18,13 @@ pipeline {
                 dbGitCheckout(url: "${GIT_URL}")
             }
         }
-
+/*
         stage('Build & Test') { 
             steps { 
                 dbMavenBuild()
             }
         }
-
+*/
         stage('Static Analysis'){
             steps {
                 dbCodeAnalysis()
