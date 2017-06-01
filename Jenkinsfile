@@ -24,19 +24,19 @@ pipeline {
                 dbMavenBuild()
             }
         }
-*/
+
         stage('Static Analysis'){
             steps {
                 dbCodeAnalysis()
             }
         }
-
-        /*stage('Build Docker Image') {
+*/
+        stage('Build Docker Image') {
             steps {
                 dbBuildDockerImage(image: "${DOCKER_IMAGE}")
             }
         }
-        */
+
 		
         /*stage('Apply to Kubernetes') {
             steps {
