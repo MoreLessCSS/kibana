@@ -1,12 +1,9 @@
-#dockerfile for ES_54 based on Deutsche Bahn vendo-st-docker-prod-local.bahnhub.tech.rz.db.de/vendo-base-image-jre:1.8.0.131
-FROM vendo-st-docker-prod-local.bahnhub.tech.rz.db.de/vendo-base-image-jre:1.8.0.131
+#Docker default CentosJava image
+FROM nimmis/java-centos
 
-MAINTAINER Robert Franjkovic <robert.franjkovic@deutschebahn.com>
+MAINTAINER me <me@me.com>
 LABEL Description="kibana 5.4"
-
 ENV KIBANA_VERSION=5.4.0 \
-    https_proxy=webproxy.aws.db.de:8080 \
-    http_proxy=webproxy.aws.db.de:8080 \
     KIBANA_SERVER_PORT=5601 \
     KIBANA_SERVER_HOST="0.0.0.0" \
     KIBANA_SERVER_NAME=kibana1 \
