@@ -28,5 +28,6 @@ COPY /config/*.* /opt/kibana/config/
 RUN chown -R elasticsearch:elasticsearch /opt/
 
 USER elasticsearch
+EXPOSE 5601:5601
 
 CMD ["/opt/kibana/bin/kibana"]
