@@ -59,11 +59,11 @@ server.name: "kibana"
 
 # Time in milliseconds to wait for Elasticsearch to respond to pings. Defaults to the value of
 # the elasticsearch.requestTimeout setting.
-elasticsearch.pingTimeout: 15000
+elasticsearch.pingTimeout: 1500
 
 # Time in milliseconds to wait for responses from the back end or Elasticsearch. This value
 # must be a positive integer.
-elasticsearch.requestTimeout: 300000
+elasticsearch.requestTimeout: 30000
 
 # List of Kibana client-side headers to send to Elasticsearch. To send *no* client-side
 # headers, set this value to [] (an empty list).
@@ -77,7 +77,7 @@ elasticsearch.requestTimeout: 300000
 #elasticsearch.shardTimeout: 0
 
 # Time in milliseconds to wait for Elasticsearch at Kibana startup before retrying.
-elasticsearch.startupTimeout: 50000
+elasticsearch.startupTimeout: 5000
 
 # Specifies the path where Kibana creates the process ID file.
 #pid.file: /var/run/kibana.pid
