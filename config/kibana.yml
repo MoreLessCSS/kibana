@@ -59,11 +59,11 @@ server.name: "kibana"
 
 # Time in milliseconds to wait for Elasticsearch to respond to pings. Defaults to the value of
 # the elasticsearch.requestTimeout setting.
-#elasticsearch.pingTimeout: 1500
+elasticsearch.pingTimeout: 15000
 
 # Time in milliseconds to wait for responses from the back end or Elasticsearch. This value
 # must be a positive integer.
-#elasticsearch.requestTimeout: 30000
+elasticsearch.requestTimeout: 300000
 
 # List of Kibana client-side headers to send to Elasticsearch. To send *no* client-side
 # headers, set this value to [] (an empty list).
@@ -77,13 +77,13 @@ server.name: "kibana"
 #elasticsearch.shardTimeout: 0
 
 # Time in milliseconds to wait for Elasticsearch at Kibana startup before retrying.
-#elasticsearch.startupTimeout: 5000
+elasticsearch.startupTimeout: 50000
 
 # Specifies the path where Kibana creates the process ID file.
 #pid.file: /var/run/kibana.pid
 
 # Enables you specify a file where Kibana stores log output.
-#logging.dest: stdout
+logging.dest: stdout
 
 # Set the value of this setting to true to suppress all logging output.
 #logging.silent: false
@@ -93,7 +93,7 @@ server.name: "kibana"
 
 # Set the value of this setting to true to log all events, including system usage information
 # and all requests.
-#logging.verbose: false
+logging.verbose: true
 
 # Set the interval in milliseconds to sample system and process performance
 # metrics. Minimum is 100ms. Defaults to 5000.
